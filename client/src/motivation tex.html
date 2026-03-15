@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivation Generator</title>
+</head>
+<style>
+    h1{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        color: darkblue;
+        margin: 20px auto;
+    }
+     h2{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        color: rgb(249, 6, 6);
+        margin-top: 100px;
+    }
+    button{
+        align-items: center;
+        display: block;
+        margin: 20px auto;
+        justify-content: center;
+        color: white;
+        background-color: black;
+        border-radius: 50px;
+        padding: 10px 20px;
+
+        
+        
+    }
+    button:hover{
+        background-color: white;
+        color: black;
+    }
+    #message{
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        display: block;
+        margin: 20px auto;
+        color: rgb(3, 110, 103);
+        margin-top: 90px;
+
+    }
+
+
+</style>
+<body>
+   <h1>Daily Motivation Words</h1>
+   <p id="message"><h2>Click The Button To Get Motivation!</h2></p>
+   <button onclick="showMessage()">Get Message</button>
+   <script>
+    function showMessage(){
+        let messages = [
+            "*Every morning brings a fresh opportunity to turn dreams into reality, so choose to wake up and chase them with unwavering determination*",
+           "*Failure is just a passing detour, not a final destination, and true success is simply the sum of small efforts repeated daily*",
+           "*if you can't fly, then run, if you can't run, then walk, if you can't walk, then crawl, but whatever you do, you have to keep moving forward*",
+           "*if there is no struggle, there is no progress*",
+           "*Be not afraid of growing slowly; be afraid only of standing still*"
+
+
+        ];
+        let randomIndex = Math.floor(Math.random()*messages.length);
+        document.getElementById("message").textContent = messages[randomIndex];
+    }
+   </script>
+    
+</body>
+</html>
